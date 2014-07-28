@@ -1,0 +1,9 @@
+'T3UGN.T3ugnDe:Carousel':
+  superTypes: ['TYPO3.Neos:Content']
+  childNodes:
+    carouselItems:
+      type: 'TYPO3.Neos:ContentCollection'
+  ui:
+    label: 'Carousel'
+    icon: 'icon-picture'
+    inlineEditable: TRUE

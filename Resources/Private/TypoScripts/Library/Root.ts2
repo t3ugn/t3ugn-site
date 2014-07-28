@@ -1,3 +1,8 @@
+include: NodeTypes/MultiColumn.ts2
+include: NodeTypes/MultiColumnItem.ts2
+include: NodeTypes/Carousel.ts2
+include: NodeTypes/Panel.ts2
+
 /**
  * Root TypoScript template for the TYPO3 Usergroup Nürnberg site
  */
@@ -6,6 +11,7 @@ page = Page {
 		stylesheets.site = TYPO3.TypoScript:Template {
 			templatePath = 'resource://T3UGN.T3ugnDe/Private/Templates/Page/Default.html'
 			sectionName = 'stylesheets'
+			files = ${Configuration.setting('T3UGN.T3ugnDe.assets.stylesheets')}
 		}
 
 		javascripts.site = TYPO3.TypoScript:Template {
@@ -32,6 +38,8 @@ page = Page {
 		javascripts.site = TYPO3.TypoScript:Template {
 			templatePath = 'resource://T3UGN.T3ugnDe/Private/Templates/Page/Default.html'
 			sectionName = 'bodyScripts'
+			vendorFiles = ${Configuration.setting('T3UGN.T3ugnDe.assets.javascripts.vendor')}
+			appFiles = ${Configuration.setting('T3UGN.T3ugnDe.assets.javascripts.app')}
 		}
 	}
 }

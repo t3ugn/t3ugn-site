@@ -1,0 +1,12 @@
+T3UGN:
+  T3ugnDe:
+    assets:
+      javascripts:
+        vendor:
+          'jquery': 'resource://T3UGN.T3ugnDe/Public/Script/jquery.min.js'
+          'foundation': 'resource://T3UGN.T3ugnDe/Public/Script/foundation.min.js'
+        app:
+          'app': 'resource://T3UGN.T3ugnDe/Public/Script/App/App.js'
+      stylesheets:
+        'app': 'resource://T3UGN.T3ugnDe/Public/Styles/App.css'
+        'foundation-icons': 'resource://T3UGN.T3ugnDe/Public/Styles/Foundation-icons/foundation-icons.css'

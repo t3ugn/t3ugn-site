@@ -1,0 +1,10 @@
+##
+# "Panel" element
+#
+prototype(T3UGN.T3ugnDe:Panel) {
+	attributes.class = 'panel'
+
+	content = TYPO3.Neos:ContentCollection {
+		nodePath = 'main'
+	}
+}

@@ -1,0 +1,150 @@
+// Imports
+@import url(http://fonts.googleapis.com/css?family=Inder);
+
+// Variables
+$text-light: #FFFFFF;
+$text-dark: #000000;
+/**
+
+Contents:
+=========
+
+:: Shared
+:: Header
+:: Content
+
+:: Impressum
+**/
+
+// Shared
+// ==========
+.row.full-width 
+{ 
+	width: 100%; 
+	max-width: 100%; 
+}
+
+.bg-grey
+{
+	background-color: darken($text-light, 5%);
+}
+
+.spaced-bottom
+{
+	margin-bottom: 15px;
+}
+
+.spaced-top
+{
+	margin-top: 15px;
+}
+
+.spaced-both
+{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.dark-overlay
+{
+	background-color: rgba(0,0,0,0.7);
+	
+	position: absolute;
+	bottom: 0;
+	height: 125px;
+	width: 100%;
+}
+
+a, a:link, a:hover, a:focus, a:active
+{
+	color: #333;
+
+	&:hover
+	{
+		color: lighten(#333,10%);
+	}
+}
+
+// Header
+// ==========
+
+.button.participate-btn
+{
+	color: #FFF;
+
+	background-color: #333;
+	border: 1px solid #444;
+	&:hover, &:active, &:focus
+	{
+		background-color: lighten(#333,10%);
+		color: #FFF;
+	}
+
+}
+
+.key-slide
+{
+	background-size: cover;
+	background-position: center center;
+	min-height: 500px;
+
+	padding-top: 395px;
+	position: relative;
+
+	.key-slide-text
+	{
+		color: $text-light;
+		
+		p,h1,h2,h3,h4,h5,h6
+		{
+			color: $text-light;
+			line-height: 1.0;
+		}
+
+		p
+		{
+			margin: 0;
+			line-height: 1.0;
+			font-size: 24px;
+		
+			&.small
+			{
+				font-size: 18px;
+				line-height: 1.8;
+			}
+		}
+
+
+	}
+}
+
+// Content
+// ==========
+
+.panel p, .panel h2, .panel h1
+{
+	color: $text-light;
+}
+
+// Footer
+// ==========
+
+.footer
+{
+	background-color: #DDD;
+	padding: 15px 0;
+
+	a 
+	{
+		margin-right: 20px;
+	}
+}
+
+// Impressum
+// ==========
+
+.panel table.contact-info p
+{
+	color: #000;
+}
+

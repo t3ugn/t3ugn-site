@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 {namespace neos=TYPO3\Neos\ViewHelpers}
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
-<html>
+<html class='no-js' lang='de'>
 <head>
+	<f:section name="metadata">
+		<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+	</f:section>
 	<f:section name="stylesheets">
-		<!-- Put your stylesheet inclusions here, they will be included in your website by TypoScript -->
+		<f:for each="{files}" as="file">
+			<link rel="stylesheet" type="text/css" href="{f:uri.resource(path: file)}" />
+		</f:for>
 	</f:section>
 	<f:section name="headScripts">
 		<!-- Put your scripts inclusions for the head here, they will be included in your website by TypoScript -->
@@ -12,18 +17,126 @@
 </head>
 <body>
 <f:section name="body">
-	<nav class="menu">
-		{parts.menu -> f:format.raw()}
-	</nav>
-	<nav class="breadcrumb">
-		{parts.breadcrumb -> f:format.raw()}
-	</nav>
-	<div class="content">
+	<div class='contain-to-grid'>
+		<nav class='top-bar' data-topbar=''>
+			<ul class='title-area'>
+				<li class='name'>
+					<h1 style='font-size: 20px'>
+						<a href='/'>
+							<strong>TYPO3</strong>
+							Usergroup Nürnberg
+						</a>
+					</h1>
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+	<f:comment>
+		<section id="slider">
+			<ul class='key-slider hide-for-small' data-options='bullets: false' data-orbit=''>
+				{content.slider -> f:format.raw()}
+			</ul>
+		</section>
+	</f:comment>
+
+	<ul class='key-slider hide-for-small' data-options='bullets: false' data-orbit=''>
+		<li data-orbit-slide='slide-1'>
+			<div class='key-slide' style='background-image: url({f:uri.resource(path: 'Assets/Images/Content/Coworking_DSC_3677.jpg', package: 'T3UGN.T3ugnDe')}); background-color: rgba(0,0,0,0.5)'>
+				<div class='dark-overlay'></div>
+				<div class='row'>
+					<div class='small-12 columns'>
+						<div class='key-slide-text text-left'>
+							<h1>
+								TYPO3
+								<strong>Usergroup</strong>
+								Nürnberg
+							</h1>
+
+							<p class='small'>Nächstes Treffen am 25.8.2014 im Coworking Space Nürnberg</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li data-orbit-slide='slide-2'>
+			<div class='key-slide' style='background-image: url({f:uri.resource(path: 'Assets/Images/Content/Coworking_DSC_3718.jpg', package: 'T3UGN.T3ugnDe')})'>
+				<div class='dark-overlay'></div>
+				<div class='row'>
+					<div class='small-12 columns'>
+						<div class='key-slide-text text-center'>
+							<h1>
+								TYPO3 Community
+								<strong>erleben</strong>
+							</h1>
+
+							<p class='small'>Neue Leute kennenlernen und wertvolle Kontakte knüpfen</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li data-orbit-slide='slide-3'>
+			<div class='key-slide' style='background-image: url({f:uri.resource(path: 'Assets/Images/Content/Coworking_DSC_3684.jpg', package: 'T3UGN.T3ugnDe')})'>
+				<div class='dark-overlay'></div>
+				<div class='row'>
+					<div class='small-12 columns'>
+						<div class='key-slide-text text-right'>
+							<h1>
+								Alle
+								<strong>Trends</strong>
+								um TYPO3 CMS, Neos und Flow
+							</h1>
+
+							<p class='small'>Immer die neuesten Entwicklungen im Blick haben</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li data-orbit-slide='slide-4'>
+			<div class='key-slide' style='background-image: url({f:uri.resource(path: 'Assets/Images/Content/Coworking_DSC_9982.jpg', package: 'T3UGN.T3ugnDe')})'>
+				<div class='dark-overlay'></div>
+				<div class='row'>
+					<div class='small-12 columns'>
+						<div class='key-slide-text text-center'>
+							<h1>
+								Workshops besuchen und dazu
+								<strong>lernen</strong>
+							</h1>
+
+							<p class='small'>Entwickler berichten von Ihren Erfahrungen</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+
+	<div class="row">
 		{content.main -> f:format.raw()}
 	</div>
+
+	<div class='footer'>
+		<div class='row'>
+			<div class='small-12 columns'>
+				<a href='impressum.html'>Impressum</a>
+				<a href='datenschutz.html'>Datenschutz</a>
+			</div>
+		</div>
+	</div>
+
 </f:section>
 <f:section name="bodyScripts">
-	<!-- Put your scripts inclusions for the end of the body here, they will be included in your website by TypoScript -->
+
+	<f:for each="{vendorFiles}" as="file">
+		<script type="text/javascript" src="{f:uri.resource(path: file)}"></script>
+	</f:for>
+	<f:for each="{appFiles}" as="file">
+		<script type="text/javascript" src="{f:uri.resource(path: file)}"></script>
+	</f:for>
+
 </f:section>
 </body>
+
 </html>
