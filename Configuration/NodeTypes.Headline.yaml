@@ -1,0 +1,71 @@
+'TYPO3.Neos.NodeTypes:Headline':
+  ui:
+    inspector:
+      groups:
+        icon:
+          label: 'Icon'
+          position: 10
+  properties:
+    title:
+      defaultValue: 'Enter Headline'
+      ui:
+        aloha:
+          'format':
+            'b': FALSE
+            'i': FALSE
+            'u': FALSE
+            'sub': FALSE
+            'sup': FALSE
+            'p': FALSE
+            'h1': FALSE
+            'h2': FALSE
+            'h3': FALSE
+            'h4': FALSE
+            'h5': FALSE
+            'pre': FALSE
+            'removeFormat': TRUE
+          'table':
+            'table': FALSE
+          'list':
+            'ol': FALSE
+            'ul': FALSE
+          'link':
+            'a': FALSE
+          'alignment':
+            'properties':
+              'right': FALSE
+              'left': FALSE
+              'justify': FALSE
+              'center': FALSE
+    headlineSize:
+      type: string
+      defaultValue: '1'
+      ui:
+        label: 'Headline Size'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'icon'
+          editor: 'TYPO3.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '1':
+                label: '1'
+              '2':
+                label: '2'
+              '3':
+                label: '3'
+              '4':
+                label: '4'
+              '5':
+                label: '5'
+    icon:
+      type: string
+      defaultValue: ''
+      ui:
+        inlineEditable: FALSE
+        label: 'Icon'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'icon'
+
+

@@ -2,6 +2,7 @@ include: NodeTypes/MultiColumn.ts2
 include: NodeTypes/MultiColumnItem.ts2
 include: NodeTypes/Carousel.ts2
 include: NodeTypes/Panel.ts2
+include: NodeTypes/Headline.ts2
 
 /**
  * Root TypoScript template for the TYPO3 Usergroup Nürnberg site

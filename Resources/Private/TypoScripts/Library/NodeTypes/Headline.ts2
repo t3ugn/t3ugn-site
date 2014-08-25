@@ -1,0 +1,6 @@
+##
+# "Headline" element
+#
+prototype(TYPO3.Neos.NodeTypes:Headline) {
+	templatePath = 'resource://T3UGN.T3ugnDe/Private/Templates/TypoScriptObjects/Headline.html'
+}
